@@ -1,0 +1,11 @@
+{
+    "commentTranslate.targetLanguage": "vi",
+    "commentTranslate.hover.enabled": true,
+    "python-envs.pythonProjects": [
+        {
+            "path": "duan1_project",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
+}

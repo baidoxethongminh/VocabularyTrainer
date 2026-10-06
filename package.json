@@ -1,0 +1,11 @@
+{
+  "name": "vocabularytrainer",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/gemini-vision.mock.test.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^25.5.0"
+  }
+}

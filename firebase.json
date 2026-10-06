@@ -1,0 +1,82 @@
+{
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "duan1_project/**",
+      "docs/**",
+      "tests/**",
+      "tmp/**",
+      "functions/**",
+      "public/**",
+      "config/api_gemini.js",
+      "**/local-gemini.js",
+      "**/service-account*.json",
+      "**/serviceAccount*.json",
+      "**/*credential*.json",
+      "**/.env*",
+      ".firebase/**",
+      ".github/**",
+      "*.exe",
+      "*.cache",
+      "package*.json",
+      "*.code-workspace"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/gemini/vision",
+        "function": {
+          "functionId": "geminiVision",
+          "region": "asia-southeast1"
+        }
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "index.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "manifest.webmanifest",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+}
